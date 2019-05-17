@@ -1,6 +1,6 @@
 # Project code from mentorship
 
-To run:
+To run (assuming you have Python3 installed):
 
 1) Clone or download ZIP file
 2) Unzip file
