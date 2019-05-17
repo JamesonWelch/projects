@@ -1,14 +1,14 @@
 import math
 
+# Addition Operation
 def add():
-    # Addition Operation
     a1 = float(input('Addition. Enter first number: '))
     a2 = float(input('Addition. Enter second number: '))
     a3 = a1 + a2
     print(a1, '+ ', a2, '=', a3)
 
+# Subtracrtion Operation
 def sub():
-    # Subtracrtion Operation
     s1 = float(input('Subtraction. Enter first number: '))
     s2 = float(input('Subtraction. Enter second number: '))
     s3 = s1 - s2
