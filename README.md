@@ -1,4 +1,4 @@
-# Project code from mentorship
+# Project Code
 
 To run (assuming you have Python3 installed):
 
