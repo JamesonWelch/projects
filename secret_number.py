@@ -21,8 +21,10 @@ if tries == 'y':
 
 elif tries == 'n':
     usr_tries = randint(1,10)
+    print('You have ', usr_tries, 'tries')
     for i in range(usr_tries):
         guess = int(input('Enter a number in the range of 1-100: '))
+        print(usr_tries - i -1, 'tries left!')
         if guess < 1 or guess > 100:
             print('Invalid input! Must enter number within range of 1-100')
             quit(0)
