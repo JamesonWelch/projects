@@ -42,7 +42,7 @@ def sample_std_deviation():
 
 def sorting(data):
     sorted_data = []
-    
+
     while data:
         minimum = data[0]
         for x in data:
@@ -53,7 +53,7 @@ def sorting(data):
 
 
 def median():
-    n_sort = sorted(dataset)
+    n_sort = sorting(dataset)
     n = len(dataset)
     if n % 2 == 0:
         median1 = n_sort[n // 2]
@@ -81,3 +81,4 @@ def maximum():
 
 
 print(median())
+median()
