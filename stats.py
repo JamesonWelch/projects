@@ -79,6 +79,3 @@ def maximum():
             max_d = dataset[i]
     return max_d
 
-
-print(median())
-median()
