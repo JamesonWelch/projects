@@ -31,8 +31,7 @@ class TestPythonMethods(unittest.TestCase):
 
     def test_dict(self):
         nums = dict(x=9, y=10)
-        nums_type = type(nums)
-        self.assertEqual(type(nums), nums_type)
+        self.assertIsInstance(nums, dict)
 
     def test_divmod(self):
         nums = divmod(5, 2)
@@ -51,31 +50,46 @@ class TestPythonMethods(unittest.TestCase):
         self.assertEqual(x, "0xc0ffee")
 
     def test_int(self):
-        pass
+        x = int("12")
+        self.assertIsInstance(x, int)
 
     def test_len(self):
-        pass
+        l = len([3, 6, 8, 3])
+        self.assertEqual(4, l)
 
     def test_list(self):
-        pass
+        l = [3, 6, 90, 29, 59]
+        l_t = (3, 6, 90, 29, 59)
+        self.assertEqual(l, list(l_t))
 
     def test_max(self):
-        pass
+        i = range(10)
+        self.assertEqual(9, max(i))
 
     def test_min(self):
-        pass
+        i = range(10)
+        self.assertEqual(0, min(i))
 
     def test_next(self):
-        pass
+        a = ["level 1", "level 2", "level 3"]
+        b = iter(a)
+        next_level = next(b)
+        after = next(b)
+        self.assertEqual("level 1", next_level)
+        self.assertEqual("level 2", after)
 
     def test_oct(self):
-        pass
+        o = oct(8)
+        self.assertEqual(o, "0o10")
 
     def test_sorted(self):
-        pass
+        l = [6, 2, 1, 3, 4]
+        self.assertEqual(sorted(l), [1, 2, 3, 4, 6])
 
     def test_sum(self):
-        pass
+        a = (3, 4)
+        s = sum(a)
+        self.assertEqual(s, 7)
 
 
 if __name__ == "__main__":
