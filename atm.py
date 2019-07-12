@@ -26,11 +26,11 @@ class atm:
         current_time = str(datetime.datetime.now())
         if amt > 500 or amt < 0:
             raise ValueError("Invalid Amount")
+        elif amt > self.balance:
+            print("Insufficient Funds")
         elif amt <= 500 and amt > 0 and amt <= self.balance:
             self.balance -= amt
             self.transactions["Withdrawals"].update({current_time: (-amt)})
-        elif amt > self.balance:
-            print("Insufficient Funds")
 
     def check_balance(self):
         return self.balance
