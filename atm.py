@@ -17,7 +17,7 @@ class atm:
         current_time = str(datetime.datetime.now())
         if amt <= 1000 and amt > 0:
             self.balance += amt
-            self.transactions["Deposits"].update({current_time: (+amt)})
+            self.transactions["Deposits"].update({current_time: (amt)})
         else:
             raise ValueError("Invalid Amount.")
 
