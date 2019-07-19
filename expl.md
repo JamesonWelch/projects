@@ -38,12 +38,12 @@ This is the HTML Flask code I'm using for the site:
  
  As it stands the code produces a list of all the headlines and their summaries which is what I'm going for.
  
-  Iran Rebuffs Trump Assertion That U.S. Ship Downed Drone
-[<p class="WSJTheme--summary--12br5Svc ">Iran denied that the U.S. Navy downed one of its drones in the Strait of Hormuz,
-a day after several close encounters between American warships and the Iranian military in the vital oil shipping route 
-further raised tensions.<span class="WSJTheme--stats--2waJk-ql ">
-<span class="WSJTheme--timestamp--21reayKL WSJTheme--red-timestamp--qefOYS5r WSJTheme--red-timestamp--qefOYS5r ">2 minutes 
-ago</span></span></p>] 
+    Iran Rebuffs Trump Assertion That U.S. Ship Downed Drone
+    [<p class="WSJTheme--summary--12br5Svc ">Iran denied that the U.S. Navy downed one of its drones in the Strait of Hormuz,
+    a day after several close encounters between American warships and the Iranian military in the vital oil shipping route 
+    further raised tensions.<span class="WSJTheme--stats--2waJk-ql ">
+    <span class="WSJTheme--timestamp--21reayKL WSJTheme--red-timestamp--qefOYS5r WSJTheme--red-timestamp--qefOYS5r ">2 minutes 
+    ago</span></span></p>] 
 
 ***I've put the code on new lines for reading sake***
  
