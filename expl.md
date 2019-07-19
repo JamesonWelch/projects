@@ -1,4 +1,4 @@
-# So this is what I have so far.  Issue being the for loop:
+# So this is what I have so far.  Issue being in the for loop:
 
 
     @app.route("/")
