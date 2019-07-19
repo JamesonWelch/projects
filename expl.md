@@ -1,43 +1,43 @@
 # So this is what I have so far.  Issue being the for loop starting in line 26:
 
-from flask import Flask, render_template
-from flask_bootstrap import Bootstrap
-import requests
-import re
-from bs4 import BeautifulSoup
+    from flask import Flask, render_template
+    from flask_bootstrap import Bootstrap
+    import requests
+    import re
+    from bs4 import BeautifulSoup
 
-app = Flask(__name__)
-Bootstrap(app)
+    app = Flask(__name__)
+    Bootstrap(app)
 
 
-@app.route("/")
-def index():
-    url = "https://www.wsj.com/"
-    req = requests.get(url)
+    @app.route("/")
+    def index():
+        url = "https://www.wsj.com/"
+        req = requests.get(url)
 
-    soup = BeautifulSoup(req.text, "html.parser")
-    container = soup.find("div", {"layout": "LS-NO-IMAGE-SPOTLIGHT-SEVEN"})
-    containers = container.find_all("article")
+        soup = BeautifulSoup(req.text, "html.parser")
+        container = soup.find("div", {"layout": "LS-NO-IMAGE-SPOTLIGHT-SEVEN"})
+        containers = container.find_all("article")
 
-    article_content = dict()
-    article_content["headline"] = container.find("h3").find("a").text
+        article_content = dict()
+        article_content["headline"] = container.find("h3").find("a").text
 
-    article_info = dict()
-    for i in containers:
-        article_info[i.find("h3").find("a").text] = i.find_all(
-            "p", {"class": "WSJTheme--summary--12br5Svc"}
+        article_info = dict()
+        for i in containers:
+            article_info[i.find("h3").find("a").text] = i.find_all(
+                "p", {"class": "WSJTheme--summary--12br5Svc"}
+            )
+        return render_template(
+            "index.html", article_content=article_content["headline"], content=article_info
         )
-    return render_template(
-        "index.html", article_content=article_content["headline"], content=article_info
-    )
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    if __name__ == "__main__":
+        app.run(debug=True)
     
 This is the HTML Flask code I'm using for the site:
 
-<ul class="list-simple-styled">
+    <ul class="list-simple-styled">
                     {% for k in content %}
                     <li>
                         <span>{{k}}</span>
