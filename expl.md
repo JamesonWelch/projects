@@ -1,4 +1,4 @@
-# So this is what I have do far.  Issue being the for loop starting in line 26:
+# So this is what I have so far.  Issue being the for loop starting in line 26:
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
