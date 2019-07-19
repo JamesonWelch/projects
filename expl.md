@@ -1,14 +1,5 @@
 # So this is what I have so far.  Issue being the for loop starting in line 26:
 
-    from flask import Flask, render_template
-    from flask_bootstrap import Bootstrap
-    import requests
-    import re
-    from bs4 import BeautifulSoup
-
-    app = Flask(__name__)
-    Bootstrap(app)
-
 
     @app.route("/")
     def index():
@@ -31,9 +22,6 @@
             "index.html", article_content=article_content["headline"], content=article_info
         )
 
-
-    if __name__ == "__main__":
-        app.run(debug=True)
     
 This is the HTML Flask code I'm using for the site:
 
