@@ -57,9 +57,9 @@ This is the HTML Flask code I'm using for the site:
     
     AttributeError: 'NoneType' object has no attribute 'text'
       
- The odd thing is also when I try using find() and find_all, it sometimes gives me this error:
+ The odd thing is also when I try using find() and find_all(), it sometimes gives me this error:
       
-      AttributeError: ResultSet object has no attribute 'text'. 
+      AttributeError: ResultSet object has no attribute 'find'. 
       You're probably treating a list of items like a single item. 
       Did you call find_all() when you meant to call find()?
       
