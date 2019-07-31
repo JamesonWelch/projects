@@ -69,8 +69,19 @@ def social_link():
 
 def social_embeds():
     """ Get all embeded social posts on site """
-    tweets = site.body.iframe.find_all("#document")
-    print(tweets)
+    iFrames = []
+    iframesxx = site.body.find_all("iframe")
+    print(iframesxx)
+
+    for iframe in iframesxx:
+        resp = requests.get(
+            iframe.attrs[
+                "https://platform.twitter.com/css/timeline.9bf5093a19cec463852b31b784bf047a.light.ltr.css"
+            ]
+        )
+        iframe_soup = BeautifulSoup(resp)
+        print(iframe_soup)
+    # iframe_soup.
 
 
 social_embeds()
