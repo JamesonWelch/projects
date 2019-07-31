@@ -11,12 +11,4 @@ import scrapy
 class ApartmentsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = scrapy.Field()
-
-    date = scrapy.Field()
-
-    urls = scra[y.Field()
-    
-    price = scrapy.Field()
-
-    description = scrapy.Field()
+    pass
